@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { config } from './config/config'
-import { motion } from 'framer-motion'
+import { motion, stagger } from 'framer-motion'
 import { MdEmail } from 'react-icons/md'
 import { TiWeatherCloudy } from 'react-icons/ti'
 import { Card } from './components/card'
@@ -23,11 +23,18 @@ function App() {
       <img 
       className='absolute w-full h-full top-0  left-0'
       src={config.backgroundSrc} alt="" />
+
       <motion.div 
       animate={theme === `light`? {backgroundColor: `rgba(255,255,255,0.4)`}:null}
       className="bg-black/90 absolute w-full h-full top-0  left-0"></motion.div>
       <div className="w-[80vw] h-[90vh]  z-20 absolute top-1/2 p-4 left-1/2 translate-[-50%] ">
-        <div 
+        <motion.div 
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {opacity: 0},
+          visible: {opacity:1,transition: {delayChildren:stagger(0.3)}}
+        }}
         className="grid gap-4 grid-cols-12  grid-rows-12 w-full h-full">
           {/* intro */}
          
@@ -257,7 +264,7 @@ function App() {
           )}
           />
           
-        </div>
+        </motion.div>
       </div>
     </div>
   )
