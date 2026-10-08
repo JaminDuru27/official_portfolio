@@ -1,0 +1,258 @@
+import { motion, stagger } from "framer-motion";
+import { Card } from "./card";
+import { Nav } from "./nav";
+import { config } from "../config/config";
+import { CgExternal } from "react-icons/cg";
+import { LuHeart } from "react-icons/lu";
+import { Theme } from "./theme";
+import { useEffect, useState } from "react";
+
+export function Projects({theme, setTheme}){
+    const [currentLP, setCurrentLP] = useState(0)
+    const [currentP, setCurrentP] = useState(0)
+    useEffect(()=>{
+        let n = 0
+        const interval = setInterval(()=>{
+            setCurrentLP(p=>  ((p + 1) % (config.lovedProjects.length)))
+        }, 8000)
+        return ()=>{
+            clearInterval(interval)
+        }
+    },[])
+    return (
+        <div  className="w-[80vw] h-[90vh]  z-20 absolute top-1/2 p-4 left-1/2 translate-[-50%] ">
+        <motion.div 
+        initial="hidden"
+        animate="visible"
+        variants={{
+        hidden: {opacity: 0},
+        visible: {opacity:1,transition: {delayChildren:stagger(0.3)}, color: theme === `light`?`black`:`white`}
+        }}
+        className="grid gap-4 grid-cols-12  grid-rows-12 w-full h-full">
+        <Nav theme={theme}/>
+        <Card
+            colstart={0} rowstart={0}
+            colspan={3} rowspan={4} p={0}
+            children={(
+                <>
+                <img 
+                className="absolute top-0 left-0 object-cover inset-0 w-full h-full"
+                src={config.productCard1.src} alt="" />
+                <motion.div 
+                className="w-full h-full relative opacity-0"
+                whileHover={{opacity: 1, display: `flex`}}
+                >
+                    <motion.div 
+                    animate={theme === `light`?{background:`rgba(255, 255, 255, 0.2)`}:null}
+                    className="w-[80%] h-[80%] absolute rounded-lg  top-1/2 left-1/2 translate-[-50%]  translate  backdrop-blur-2xl  flex flex-col gap-y-2 bg-black/70 p-4">
+                        <motion.div 
+                        animate={{translateY: [0, 10, 0]}}
+                        transition={{repeat: Infinity, duration: 10, delay:Math.random()}}
+                        style={{filter: `blur(8px)`}}
+                        className="absolute top-2 scoop left-2 w-10 h-10 rounded-full bg-orange-500 z-[-1] filter-blur-2xl"></motion.div>
+                        <motion.div 
+                        animate={{translateY: [0, 10, 0]}}
+                        transition={{repeat: Infinity, duration: 10, delay:Math.random()}}
+                        style={{filter: `blur(8px)`}}
+                        className="absolute top-[40%] scoop left-20 w-17 h-17 rounded-full bg-purple-500 z-[-1] filter-blur-2xl"></motion.div>
+                        <motion.div 
+                        animate={{translateY: [0, 10, 0]}}
+                        transition={{repeat: Infinity, duration: 10, delay:Math.random()}}
+                        style={{filter: `blur(8px)`}}
+                        className="absolute top-20 scoop left-0 w-10 h-10 rounded-full bg-emerald-500 z-[-1] filter-blur-2xl"></motion.div>
+                                                
+                        <div className="uppercase ">{config.productCard1.title}</div>
+                        <div className="text-[.7rem]">{config.productCard1.text}</div>
+                        <div className="w-full flex items-end justify-end ">
+                            <a 
+                            href={config.productCard1.link} target="_blank"
+                            className="flex items-cennter justify-center bg-black/40 cursor-pointer rounded-full p-2"
+                            ><CgExternal/></a>
+                        </div>
+                    </motion.div>
+                </motion.div>
+                </>
+            )}
+        />
+        <Card
+            colstart={4} rowstart={0}
+            colspan={5} rowspan={4} p={0}
+            children={(
+                <>
+                <div className="p-2 flex items-center justify-center bg-zinc-300 w-fit absolute h-fit rounded-full top-2 right-2">{<LuHeart stroke="black"/>}</div>
+                <div className="w-full h-full ">
+                    <motion.div 
+                    animate={{translateX: `-${(100) * currentLP}%`}}
+                    className="w-full flex h-full items-center">
+                        {config.lovedProjects.map(({name, category, descr, stack, link, src}, k)=>{
+                            return (
+                                <div className="w-full h-full relative bg-black shrink-0">
+                                    <img 
+                                    className="w-full h-fullz-[-1]  object-cover  absolute top-0 left-0"
+                                    src={src} alt="" />
+                                    <div className="name z-[20] ">{name}</div>
+                                </div>
+                            )
+                        })}
+                    </motion.div>
+                </div>
+                </>
+            )}
+        />
+        <Card
+            colstart={9} rowstart={0}
+            colspan={4} rowspan={12} p={0}
+            children={(
+                <>
+                <motion.div 
+                animate={{translateX: `-${currentP * 100}%`}}
+                className="w-full h-full flex items-center">
+                    {config.allProjects.map(({name, category, descr, stack, link, src},k)=>{
+                        return (
+                            <div 
+                            onClick={()=>{
+                                setCurrentP(p=>(p + 1) % (config.allProjects.length))
+                            }}
+                            key={k} className="w-full  h-full shrink-0 relative">
+                                <img src={src} 
+                                className="w-full h-full z-[-1] object-cover absolute top-0 left-0"
+                                alt="" /> 
+                                <div className="w-full backdrop-blur-[5px] p-4 bg-white/30  text-zinc-700 h-full flex flex-col  gap-y-4">
+                                    <div className="text-[2rem] z-10 ">{name}</div>
+                                    <div className="text-zinc-600 border flex border-2 border p-2 rounded-lg justify-between items-center">{category} 
+                                        <a href={link} target="_blank" className="">{<CgExternal/>}</a>
+                                    </div>
+                                    <div className="">{descr}</div>
+                                        <div className="absolute w-fit rounded-lg bottom-2 left-2  gap-x-4 flex items-center p-2 backdrop-blur overflow-hidden">
+                                            {(stack || []).map((E, k    )=>{
+                                                return (
+                                                    <div key={k} className="text-black"><E/></div>
+                                                )
+                                            })}
+                                        </div>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </motion.div>
+                <div className="absolute bottom-4 right-4 w-6 h-6 rounded-full bg-zinc-800">
+                    {
+                        config.allProjects.map((_, k)=>{
+                            const radius = 20
+                            const total = config.allProjects.length
+                            const angle  = (k / total) * (total < 7 ? 180 : 360)
+                            return (
+                                <motion.div
+                                animate={{background: currentP === k?`black`:`white`}}
+                                style={{
+                                    transform: `rotate(${angle}deg) translateY(-${radius}px) rotate(-${angle}deg)`,
+                                    transformOrigin: `center center`,
+                                    borderRadius:20,
+                                }}
+                                key = {k}
+                                className="dor scoop w-2 h-2 absolute top-1/2 left-1/2 translate-[-50%] bg-white "
+                                >
+                                </motion.div>
+                            )
+                        })
+                    }
+                </div>
+                </>
+            )}
+        />
+        <Card
+            colstart={0} rowstart={5}
+            colspan={5} rowspan={4}
+            children={(
+                <>
+                <div className="w-full h-full p-4 flex flex-col gap-y-4">
+                    <div className="">{config.labProject.title}</div>
+                    <div className="text-[.6rem]">{config.labProject.description}</div>
+                    <div className="flex items-center gap-x-2">
+                        <a 
+                        href={config.labProject.docsUrl} target="_blank"
+                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">docs {<CgExternal/>}</a>
+                        <a 
+                        href={config.labProject.demoUrl} target="_blank"
+                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">demo {<CgExternal/>}</a>
+                    </div>
+                </div>
+                </>
+            )}
+        />
+        <Card
+            colstart={6} rowstart={5}
+            colspan={3} rowspan={4}
+            children={(
+                <>
+                <img 
+                className="absolute top-0 left-0 object-cover inset-0 w-full h-full"
+                src={config.productCard2.src} alt="" />
+                <motion.div 
+                className="w-full h-full relative opacity-0"
+                whileHover={{opacity: 1, display: `flex`}}
+                >
+                    <motion.div 
+                    animate={theme === `light`?{background:`rgba(255, 255, 255, 0.2)`}:null}
+                    className="w-[80%] h-[80%] absolute rounded-lg  top-1/2 left-1/2 translate-[-50%]  translate  backdrop-blur-2xl  flex flex-col gap-y-2 bg-black/70 p-4">
+                        <motion.div 
+                        animate={{translateY: [0, 10, 0]}}
+                        transition={{repeat: Infinity, duration: 10, delay:Math.random()}}
+                        style={{filter: `blur(8px)`}}
+                        className="absolute top-2 scoop left-2 w-10 h-10 rounded-full bg-orange-500 z-[-1] filter-blur-2xl"></motion.div>
+                        <motion.div 
+                        animate={{translateY: [0, 10, 0]}}
+                        transition={{repeat: Infinity, duration: 10, delay:Math.random()}}
+                        style={{filter: `blur(8px)`}}
+                        className="absolute top-[40%] scoop left-20 w-17 h-17 rounded-full bg-purple-500 z-[-1] filter-blur-2xl"></motion.div>
+                        <motion.div 
+                        animate={{translateY: [0, 10, 0]}}
+                        transition={{repeat: Infinity, duration: 10, delay:Math.random()}}
+                        style={{filter: `blur(8px)`}}
+                        className="absolute top-20 scoop left-0 w-10 h-10 rounded-full bg-emerald-500 z-[-1] filter-blur-2xl"></motion.div>
+                                                
+                        <div className="uppercase ">{config.productCard2.title}</div>
+                        <div className="text-[.7rem]">{config.productCard2.text}</div>
+                        <div className="w-full flex items-end justify-end ">
+                            <a 
+                            href={config.productCard2.link} target="_blank"
+                            className="flex items-cennter justify-center bg-black/40 cursor-pointer rounded-full p-2"
+                            ><CgExternal/></a>
+                        </div>
+                    </motion.div>
+                </motion.div>
+                </>
+            )}
+        />
+        <Card
+            colstart={0} rowstart={9}
+            colspan={3} rowspan={4} p={0}
+            children={(
+                <Theme theme={theme} setTheme={setTheme}/>
+            )}
+        />
+        <Card
+            colstart={4} rowstart={9}
+            colspan={5} rowspan={4}
+            children={(
+                <>
+                <div className="w-full h-full p-4 flex flex-col gap-y-4">
+                    <div className="">{config.featuredProject.title}</div>
+                    <div className="text-[.6rem]">{config.featuredProject.description}</div>
+                    <div className="flex items-center gap-x-2">
+                        <a 
+                        href={config.featuredProject.docsUrl} target="_blank"
+                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">docs {<CgExternal/>}</a>
+                        <a 
+                        href={config.featuredProject.demoUrl} target="_blank"
+                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">demo {<CgExternal/>}</a>
+                    </div>
+                </div>
+                </>
+            )}
+        />
+        </motion.div>
+        </div>
+        
+    )
+}

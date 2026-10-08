@@ -1,8 +1,9 @@
 import { BsTypescript } from "react-icons/bs";
-import { DiHtml5 } from "react-icons/di";
-import { FaFacebook, FaGithub, FaInstagram, FaJs, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { DiHtml5, DiNodejs } from "react-icons/di";
+import { FaFacebook, FaGithub, FaInstagram, FaJs, FaLinkedin, FaReact, FaTwitter } from "react-icons/fa6";
 import { FcNext } from "react-icons/fc";
 import { RiTailwindCssLine } from "react-icons/ri";
+import { SiTailwindcss, SiVite } from "react-icons/si";
 
 export const config = {
     //Home
@@ -67,38 +68,143 @@ export const config = {
         },
     ],
     certificates:[
-    {
-        title: "Full-Stack Web Development Architecture",
-        by: "Meta / Coursera",
-        year: "2023",
-        about: "Building scalable frontend UIs with React alongside robust RESTful APIs and backend database modeling.",
-        link: ""
-    },
+        {
+            title: "Full-Stack Web Development Architecture",
+            by: "Meta / Coursera",
+            year: "2023",
+            about: "Building scalable frontend UIs with React alongside robust RESTful APIs and backend database modeling.",
+            link: ""
+        },
+        ],
+        badges:[
+            {impressions: 500, unit: `%`, title:`Commits`},
+            {impressions: 45, unit: `+`, title:`Starts`},
+            {impressions: 100, unit: `%`, title:`Uptime`},
+        ],
+        
+        testimonials: [
+        {
+            src: "/profile (1).jpg",
+            name: "Alex Morgan",
+            role: "Project Manager",
+            comment: "Extremely detail-oriented developer. Built our UI components with zero layout lag and delivered ahead of schedule."
+        },
+        {
+            src: "/profile (2).jpg",
+            name: "David Chen",
+            role: "Senior Full-Stack Engineer",
+            comment: "Clean code structure, solid component architecture, and great mastery over complex animations and responsive layouts."
+        },
+
     ],
-    badges:[
-        {impressions: 500, unit: `%`, title:`Commits`},
-        {impressions: 45, unit: `+`, title:`Starts`},
-        {impressions: 100, unit: `%`, title:`Uptime`},
+
+    // Projects 
+    productCard1:{
+        src: `/web3.jpg`,
+        title: `Academic`,
+        link:``,
+        text: `School management app`
+    },
+    productCard2:{
+        src: `/web4.jpg`,
+        title: `Good Will Project`,
+        link:``,
+        text: `Do better as a person`
+    },
+    featuredProject: {
+        title: "School Management System (SMS)",
+        tagline: "Desktop-First Administrative Platform",
+        description: "Architected a high-performance administrative platform tailored for secondary schools. Features offline database sync, automated student grading pipelines, and custom layout views.",
+        stack: [FaReact, SiVite, "Tailwind CSS", "PostgreSQL"],
+        demoUrl: "https://example.com/demo",
+        docsUrl: "https://github.com/example/docs"
+    },
+
+    // Performance / Experimental Lab Card
+    labProject: {
+        title: "Canvas Animation Engine",
+        tagline: "Graphics & UI Performance",
+        description: "GPU-accelerated HTML5 canvas background pipeline eliminating main-thread layout lag while maintaining infinite 60fps animations.",
+        stack: ["HTML5 Canvas", "GPU Acceleration", "Framer Motion"]
+    },
+
+    // Array powering the Arc Ring & Grid
+    lovedProjects: [
+        {
+        name: "The Goodwill Project",
+        category: "Web Application",
+        descr: "Interactive platform built with a modern UI stack and responsive layouts.",
+        stack: [FaReact, SiTailwindcss ],
+        link: "https://github.com/example/goodwill",
+        src: `/web3.jpg`
+        },
+        {
+        name: "Life Conservationist Org",
+        category: "Non-Profit Portal",
+        descr: "Full-stack web application featuring dynamic content management and fast client rendering.",
+        stack: [FaReact, SiVite, DiNodejs],
+        link: "https://github.com/example/life-conservation",
+        src: `/web4.jpg`
+        },
+        {
+        name: "RUSH Hour",
+        category: "Web App",
+        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
+        stack: [FaReact, SiTailwindcss ],
+        link: "https://github.com/example/rush-hour",
+        src: `/web1.jpg`
+        },
+        {
+        name: "School board",
+        category: "Web App",
+        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
+        stack: [FaReact, SiTailwindcss ],
+        link: "https://github.com/example/rush-hour",
+        src: `/web2.jpg`
+        },
+        
     ],
-     
-    testimonials: [
-    {
-        src: "/profile (1).jpg",
-        name: "Alex Morgan",
-        role: "Project Manager",
-        comment: "Extremely detail-oriented developer. Built our UI components with zero layout lag and delivered ahead of schedule."
-    },
-    {
-        src: "/profile (2).jpg",
-        name: "David Chen",
-        role: "Senior Full-Stack Engineer",
-        comment: "Clean code structure, solid component architecture, and great mastery over complex animations and responsive layouts."
-    },
-    // {
-    //     src: "/profile (3).jpg",
-    //     name: "Sarah Jenkins",
-    //     role: "Product Lead",
-    //     comment: "Transformed our complex web portal into an intuitive, ultra-fast experience. A pleasure to collaborate with!"
-    // }
-]
+    allProjects: [
+        {
+        name: "The Goodwill Project",
+        category: "Web Application",
+        descr: "Interactive platform built with a modern UI stack and responsive layouts.",
+        stack: [FaReact, SiTailwindcss ],
+        link: "https://github.com/example/goodwill",
+        src: `/web3.jpg`
+        },
+        {
+        name: "Life Conservationist Org",
+        category: "Non-Profit Portal",
+        descr: "Full-stack web application featuring dynamic content management and fast client rendering.",
+        stack: [FaReact, SiVite, DiNodejs],
+        link: "https://github.com/example/life-conservation",
+        src: `/web4.jpg`
+        },
+        {
+        name: "RUSH Hour",
+        category: "Web App",
+        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
+        stack: [FaReact, SiTailwindcss ],
+        link: "https://github.com/example/rush-hour",
+        src: `/web1.jpg`
+        },
+        {
+        name: "School board",
+        category: "Web App",
+        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
+        stack: [FaReact, SiTailwindcss ],
+        link: "https://github.com/example/rush-hour",
+        src: `/web1.jpg`
+        },
+        {
+        name: "Md Editor",
+        category: "Web App",
+        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
+        stack: [FaReact, SiTailwindcss ],
+        link: "https://github.com/example/rush-hour",
+        src: `/web1.jpg`
+        },
+        
+    ]
 }
