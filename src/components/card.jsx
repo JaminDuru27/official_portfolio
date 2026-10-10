@@ -12,7 +12,7 @@ export function Card({theme,children, colspan, rowspan, p=4, colstart, rowstart,
       :{backgroundColor: `rgba(255,255,255,0.1)`, boxShadow:`none`, borderColor: `rgba(255,255,255,.1)`, color: `rgba(255,255,255,0.8)`}}
     style={{
       boxShadow:`0px 0px 8px 0px #00000059`,
-      padding: p,
+      padding: `${p}px`,
       gridColumnStart: colstart,
       gridColumnEnd: colspan ? `span ${colspan}`:null,
       gridRowStart: rowstart ,

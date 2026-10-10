@@ -1,11 +1,11 @@
 import { motion, stagger } from "framer-motion";
-import { Card } from "./card";
-import { Nav } from "./nav";
-import { config } from "../config/config";
-import { CgExternal } from "react-icons/cg";
+import * as cg from "react-icons/cg";
 import { LuHeart } from "react-icons/lu";
-import { Theme } from "./theme";
 import { useEffect, useState } from "react";
+import { config } from "../config/config";
+import { Card } from "../components/card";
+import { Nav } from "../components/nav";
+import { Theme } from "../components/theme";
 
 export function Projects({theme, setTheme}){
     const [currentLP, setCurrentLP] = useState(0)
@@ -67,7 +67,7 @@ export function Projects({theme, setTheme}){
                             <a 
                             href={config.productCard1.link} target="_blank"
                             className="flex items-cennter justify-center bg-black/40 cursor-pointer rounded-full p-2"
-                            ><CgExternal/></a>
+                            ><cg.CgExternal/></a>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -120,7 +120,7 @@ export function Projects({theme, setTheme}){
                                 <div className="w-full backdrop-blur-[5px] p-4 bg-white/30  text-zinc-700 h-full flex flex-col  gap-y-4">
                                     <div className="text-[2rem] z-10 ">{name}</div>
                                     <div className="text-zinc-600 border flex border-2 border p-2 rounded-lg justify-between items-center">{category} 
-                                        <a href={link} target="_blank" className="">{<CgExternal/>}</a>
+                                        <a href={link} target="_blank" className="">{<cg.CgExternal/>}</a>
                                     </div>
                                     <div className="">{descr}</div>
                                         <div className="absolute w-fit rounded-lg bottom-2 left-2  gap-x-4 flex items-center p-2 backdrop-blur overflow-hidden">
@@ -171,10 +171,10 @@ export function Projects({theme, setTheme}){
                     <div className="flex items-center gap-x-2">
                         <a 
                         href={config.labProject.docsUrl} target="_blank"
-                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">docs {<CgExternal/>}</a>
+                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">docs {<cg.CgExternal/>}</a>
                         <a 
                         href={config.labProject.demoUrl} target="_blank"
-                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">demo {<CgExternal/>}</a>
+                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">demo {<cg.CgExternal/>}</a>
                     </div>
                 </div>
                 </>
@@ -217,7 +217,7 @@ export function Projects({theme, setTheme}){
                             <a 
                             href={config.productCard2.link} target="_blank"
                             className="flex items-cennter justify-center bg-black/40 cursor-pointer rounded-full p-2"
-                            ><CgExternal/></a>
+                            ><cg.CgExternal/></a>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -242,10 +242,10 @@ export function Projects({theme, setTheme}){
                     <div className="flex items-center gap-x-2">
                         <a 
                         href={config.featuredProject.docsUrl} target="_blank"
-                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">docs {<CgExternal/>}</a>
+                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">docs {<cg.CgExternal/>}</a>
                         <a 
                         href={config.featuredProject.demoUrl} target="_blank"
-                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">demo {<CgExternal/>}</a>
+                        className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">demo {<cg.CgExternal/>}</a>
                     </div>
                 </div>
                 </>

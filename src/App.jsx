@@ -6,7 +6,9 @@ import { motion, stagger } from 'framer-motion'
 import { Home } from './pages/home'
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
 import { Work } from './pages/work'
-import { Projects } from './components/projects'
+import { Projects } from './pages/projects'
+import { Contacts } from './pages/contacts'
+
 
 function App() {
   const [theme, setTheme] = useState(`dark`)
@@ -25,6 +27,7 @@ function App() {
               <Route path='/'element={<Home theme={theme} setTheme={setTheme}/>}/>
               <Route path='/work'element={<Work theme={theme} setTheme={setTheme}/>}/>
               <Route path='/projects' element={<Projects theme={theme} setTheme={setTheme}/>}/>
+              <Route path='/contact' element={<Contacts theme={theme} setTheme={setTheme}/>}/>
             </Routes>
           </BrowserRouter>
         

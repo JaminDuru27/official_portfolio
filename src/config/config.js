@@ -1,7 +1,10 @@
+import { BiPhone } from "react-icons/bi";
 import { BsTypescript } from "react-icons/bs";
 import { DiHtml5, DiNodejs } from "react-icons/di";
 import { FaFacebook, FaGithub, FaInstagram, FaJs, FaLinkedin, FaReact, FaTwitter } from "react-icons/fa6";
 import { FcNext } from "react-icons/fc";
+import { LiaLinkedin } from "react-icons/lia";
+import { MdEmail } from "react-icons/md";
 import { RiTailwindCssLine } from "react-icons/ri";
 import { SiTailwindcss, SiVite } from "react-icons/si";
 
@@ -117,7 +120,8 @@ export const config = {
         description: "Architected a high-performance administrative platform tailored for secondary schools. Features offline database sync, automated student grading pipelines, and custom layout views.",
         stack: [FaReact, SiVite, "Tailwind CSS", "PostgreSQL"],
         demoUrl: "https://example.com/demo",
-        docsUrl: "https://github.com/example/docs"
+        docsUrl: "https://github.com/example/docs",
+        
     },
 
     // Performance / Experimental Lab Card
@@ -206,5 +210,18 @@ export const config = {
         src: `/web1.jpg`
         },
         
+    ],
+
+    //Contact
+
+    services:[
+        `webflow`, `SEO`, `UX/UI Design`, `Framer`, `WebFlow`, `3D design`, `Social Media`,`Branding` 
+    ],
+    phoneNo: `+234870000000`,
+    contacts:[
+        {icon: MdEmail, fill: ``, stroke:``, link: `mailto-`},
+        {icon: FaGithub, fill: ``, stroke:``, link: ``},
+        {icon: FaTwitter, fill: ``, stroke:``, link: ``},
+        {icon: LiaLinkedin, fill: ``, stroke:``, link: ``},
     ]
 }

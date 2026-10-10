@@ -34,7 +34,7 @@ export function Home({theme,setTheme}){
         <Card
           theme={theme}
           colstart={0}rowstart={0}
-          colspan={4} rowspan={4} p={8}
+          colspan={4} rowspan={4} p={16}
           children={(
             <>
             <div className="text-bold text-[1.6rem]">{config.intro.name}</div>
