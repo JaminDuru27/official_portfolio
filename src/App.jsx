@@ -8,19 +8,20 @@ import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
 import { Work } from './pages/work'
 import { Projects } from './pages/projects'
 import { Contacts } from './pages/contacts'
+import { Nav } from './components/nav'
 
 
 function App() {
   const [theme, setTheme] = useState(`dark`)
   return (
-    <div className="bg-black  text-white ]">
+    <div className="bg-black  text-white overflow-y-auto scrolly ">
       <img 
-      className='absolute w-full h-full top-0  left-0'
+      className='fixed w-full h-full top-0  left-0'
       src={config.backgroundSrc} alt="" />
-
+        
         <motion.div 
         animate={theme === `light`? {backgroundColor: `rgba(255,255,255,0.4)`}:null}
-        className="bg-black/90 absolute w-full h-full top-0  left-0"></motion.div>      
+        className="bg-black/90 fixed w-full h-full top-0  left-0 overflow-hidden"></motion.div>      
 
           <BrowserRouter>
             <Routes>

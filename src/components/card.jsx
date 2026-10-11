@@ -13,12 +13,14 @@ export function Card({theme,children, colspan, rowspan, p=4, colstart, rowstart,
     style={{
       boxShadow:`0px 0px 8px 0px #00000059`,
       padding: `${p}px`,
-      gridColumnStart: colstart,
-      gridColumnEnd: colspan ? `span ${colspan}`:null,
-      gridRowStart: rowstart ,
-      gridRowEnd: rowspan ? `span ${rowspan}`:null,
+      "--cs": colstart,
+      "--csp": colspan ? `span ${colspan}`:null,
+      "--rs": rowstart ,
+      "--rsp": rowspan ? `span ${rowspan}`:null,
     }}
-    className={`col-start-${colstart} relative row-start-${rowstart} col-span-${colspan} row-span-${rowspan} p-${p}  overflow-hidden border-1  flex gap-4 flex-col rounded-2xl  backdrop-blur-2xl ${style}`}
+    className={`
+      lg:[grid-column-start:var(--cs)]  lg:[grid-column-end:var(--csp)]  lg:[grid-row-start:var(--rs)]  lg:[grid-row-end:var(--rsp)] 
+      relative  overflow-hidden border-1  flex gap-4 flex-col rounded-2xl  backdrop-blur-2xl ${style}`}
     >
       {children}
     </motion.div>
