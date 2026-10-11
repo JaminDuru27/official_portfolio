@@ -11,6 +11,7 @@ import { Grid } from "../components/grid";
 export function Projects({theme, setTheme}){
     const [currentLP, setCurrentLP] = useState(0)
     const [currentP, setCurrentP] = useState(0)
+    const [r, setR] = useState(0)
     useEffect(()=>{
         let n = 0
         const interval = setInterval(()=>{
@@ -26,6 +27,7 @@ export function Projects({theme, setTheme}){
         children ={(
             <>
             <Card
+                theme={theme}
                 colstart={0} rowstart={0}
                 colspan={3} rowspan={4} p={0}
                 children={(
@@ -70,6 +72,7 @@ export function Projects({theme, setTheme}){
                 )}
             />
             <Card
+                theme={theme}
                 colstart={4} rowstart={0}
                 colspan={5} rowspan={4} p={0}
                 children={(
@@ -108,13 +111,14 @@ export function Projects({theme, setTheme}){
                 )}
             />
             <Card
+                theme={theme}
                 colstart={9} rowstart={0}
                 colspan={4} rowspan={12} p={0}
                 children={(
                     <>
                     <motion.div 
                     animate={{translateX: `-${currentP * 100}%`}}
-                    className="w-full h-full flex items-center ">
+                    className="w-full h-full  flex items-center ">
                         {config.allProjects.map(({name, category, descr, stack, link, src},k)=>{
                             return (
                                 <div 
@@ -171,6 +175,7 @@ export function Projects({theme, setTheme}){
                 )}
             />
             <Card
+                theme={theme}
                 colstart={0} rowstart={5}
                 colspan={5} rowspan={4}
                 children={(
@@ -191,6 +196,7 @@ export function Projects({theme, setTheme}){
                 )}
             />
             <Card
+                theme={theme}
                 colstart={6} rowstart={5}
                 colspan={3} rowspan={4}
                 children={(
@@ -235,6 +241,7 @@ export function Projects({theme, setTheme}){
                 )}
             />
             <Card
+                theme={theme}
                 colstart={0} rowstart={9}
                 colspan={3} rowspan={4} p={0}
                 children={(
@@ -242,6 +249,7 @@ export function Projects({theme, setTheme}){
                 )}
             />
             <Card
+                theme={theme}
                 colstart={4} rowstart={9}
                 colspan={5} rowspan={4}
                 children={(

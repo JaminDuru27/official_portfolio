@@ -99,6 +99,7 @@ export function Contacts({theme,setTheme}){
         children={(
             <>
             <Card
+            theme={theme}
             colstart={0} rowstart={0}
             colspan={9} rowspan={4} p={16}
             children={(
@@ -109,6 +110,7 @@ export function Contacts({theme,setTheme}){
             )}
             />
             <Card
+            theme={theme}
             colstart={10} rowstart={0}
             colspan={3} rowspan={4}
             children={(
@@ -131,6 +133,7 @@ export function Contacts({theme,setTheme}){
             />
             
             <Card
+            theme={theme}
             colstart={0} rowstart={5}
             colspan={4} rowspan={8}
             children={(
@@ -225,6 +228,7 @@ export function Contacts({theme,setTheme}){
             )}
             />
             <Card
+            theme={theme}
             colstart={5} rowstart={5}
             colspan={3} rowspan={8} p={0}
             children={(
@@ -250,6 +254,7 @@ export function Contacts({theme,setTheme}){
             )}
             />
             <Card
+            theme={theme}
             colstart={8} rowstart={5}
             colspan={5} rowspan={8} p={0}
             children={(

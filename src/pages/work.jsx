@@ -16,6 +16,7 @@ export function Work({theme, setTheme}){
             <>
             {/* timeline */}    
             <Card
+            theme={theme}
             colstart={0} colspan={4} p={5}
             rowstart={0} rowspan={12}
             children={(
@@ -56,6 +57,7 @@ export function Work({theme, setTheme}){
             />
             {/* image */}
             <Card
+            theme={theme}
             colstart={5} colspan={2}
             rowstart={0} rowspan={3}
             children={(
@@ -68,6 +70,7 @@ export function Work({theme, setTheme}){
             />
             {/* badges */}
             <Card
+            theme={theme}
             colstart={7} colspan={6}
             rowstart={0} rowspan={3}
             children={( 
@@ -92,6 +95,7 @@ export function Work({theme, setTheme}){
             />
             {/* cerificates */}
             <Card
+            theme={theme}
             colstart={5} colspan={5 }
             rowstart={4} rowspan={5}
             children={( 
@@ -122,6 +126,7 @@ export function Work({theme, setTheme}){
             )}
             />
             <Card
+            theme={theme}
             colstart={10} colspan={3}
             rowstart={4} rowspan={9}
             children={( 
@@ -154,6 +159,7 @@ export function Work({theme, setTheme}){
             )}
             />
             <Card
+            theme={theme}
             colstart={5} colspan={3}
             rowstart={9} rowspan={3} p={0}
             children={( 
@@ -163,6 +169,7 @@ export function Work({theme, setTheme}){
             )}
             />
             <Card
+            theme={theme}
             colstart={8} colspan={2}
             rowstart={9} rowspan={3}
             children={( 
@@ -177,6 +184,7 @@ export function Work({theme, setTheme}){
             )}
             />
             <Card
+            theme={theme}
             colstart={5} colspan={5}
             rowstart={12} rowspan={1}
             children={( 
