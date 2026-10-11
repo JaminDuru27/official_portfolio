@@ -32,8 +32,8 @@ export function Contacts({theme,setTheme}){
         setRadius(dist)
         setSize(width /2)
 
-        config.contacts = config.contacts.map(c=>({...c, color: randomBrightColor()}))
-
+        config.handles = config.handles.map(c=>({...c, color: randomBrightColor()}))
+        console.log(config.handles)
         try{if(!planck)throw new Error(`planck is not defined`)}
         catch(err){;return}
 
@@ -260,19 +260,19 @@ export function Contacts({theme,setTheme}){
             children={(
                 <>
                 <div 
-                style={{boxShadow: `0 0px 20px -12px ${config?.contacts?.[c]?.color || ` #ffffff2f`} inset`}}
+                style={{boxShadow: `0 0px 20px -12px ${config?.handles?.[c]?.color || ` #ffffff2f`} inset`}}
                 ref={toolsRef}
                 onClick={()=>{
-                    setC(p=>(p + 1) % config.contacts.length)
+                    setC(p=>(p + 1) % config.handles.length)
                 }}
                 className="w-full relative h-full">
                     <motion.div 
-                    animate={{rotate: `-${((360/config.contacts.length) * c) + 45}deg`, background: `${config?.contacts?.[c]?.color || ` #ffffff2f`}`}}
+                    animate={{rotate: `-${((360/config.handles.length) * c) + 45}deg`, background: `${config?.handles?.[c]?.color || ` #ffffff2f`}`}}
                     className="w-20 h-20 bg-white/20 rounded-full absolute right-0 bottom-0 translate-[50%]"
                     >
-                        {config.contacts.map(({icon, fill, stroke, link, color}, k )=>{
+                        {config.handles.map(({icon, link, color}, k )=>{
                             const Icon = icon
-                            const total = config.contacts.length
+                            const total = config.handles.length
                             const angle  = (k / total) *   360
                             return (
                                 <motion.div 
@@ -298,7 +298,7 @@ export function Contacts({theme,setTheme}){
                                         onClick={()=>{
                                             const a = document.createElement(`a`); a.href = link;a.click()
                                         }}
-                                        size={size/3} fill={fill} stroke={stroke}/>
+                                        size={size/3} />
                                     </div>
                                 </motion.div>
                                 // ><Icon/></div>

@@ -34,11 +34,11 @@ export const config = {
         {icon: DiHtml5, fill: `red`, stroke:`transparent`},
     ],
     handles:[
-        {icon: FaGithub, link:``},
-        {icon: FaLinkedin, link:``},
-        {icon: FaTwitter, link:``},
-        {icon: FaInstagram, link:``},
-        {icon: FaFacebook, link:``},
+        {icon: FaGithub, link:``,color: ``,},
+        {icon: FaLinkedin, link:``,color: ``},
+        {icon: FaTwitter, link:``,color: ``},
+        {icon: FaInstagram, link:``,color: ``},
+        {icon: FaFacebook, link:``,color: ``},
     ],
     projects: [
         {name: `The Goodwill Project`, link: ``},
@@ -218,10 +218,4 @@ export const config = {
         `webflow`, `SEO`, `UX/UI Design`, `Framer`, `WebFlow`, `3D design`, `Social Media`,`Branding` 
     ],
     phoneNo: `+234870000000`,
-    contacts:[
-        {icon: MdEmail, fill: ``, stroke:``, link: `mailto-`},
-        {icon: FaGithub, fill: ``, stroke:``, link: ``},
-        {icon: FaTwitter, fill: ``, stroke:``, link: ``},
-        {icon: LiaLinkedin, fill: ``, stroke:``, link: ``},
-    ]
 }
