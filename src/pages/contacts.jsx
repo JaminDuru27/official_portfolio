@@ -243,7 +243,6 @@ export function Contacts({theme,setTheme}){
                                 return (
                                     <motion.div
                                     ref={(el)=>{if(el)servicesrefs.current[k] = el}} 
-                                    animate={theme ===`light`?{background: ` #00000053`, color: ` #090909a4`}:null}
                                     key={k} 
                                     className="absolute text-[.7rem] md:text-[.8rem] lg:text-[1rem] opacity-0 top-0 left-0 text-[#000000cd] px-2 py-2 rounded-full bg-white/20">{s}</motion.div>
                                 )
@@ -279,7 +278,7 @@ export function Contacts({theme,setTheme}){
                                 href={link}
                                 key = {k}
                                 animate ={k === c?{background: `${color}`, border:`2px solid #ffffff58`, opacity:1}:null}
-                                style={{
+                                style={{    
                                     width: size + `px`,
                                     height: size + `px`,
                                     transform: `rotate(${angle}deg) translateY(-${radius}px) rotate(-${angle}deg)`,

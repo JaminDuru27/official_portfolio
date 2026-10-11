@@ -89,7 +89,7 @@ export function Home({theme,setTheme}){
                 whileTap={{scale:.9}} 
                 href={link || `#`}
                 target='_blank'
-                className="p-4 cursor-pointer flex items-center justify-center bg-white/20 rounded-2xl border-2 border-white/10">
+                className="lg:p-4 sm:p-4 cursor-pointer md:p-2 flex items-center justify-center bg-white/20 rounded-2xl border-2 border-white/10">
                   <Icon fill={theme ===`light`?`rgba(0,0,0,.7)`:`rgba(255,255,255,.7)`}/>
                 </motion.a>
               )

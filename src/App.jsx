@@ -20,7 +20,7 @@ function App() {
       src={config.backgroundSrc} alt="" />
         
         <motion.div 
-        animate={theme === `light`? {backgroundColor: `rgba(255,255,255,0.4)`}:null}
+        animate={theme === `light`? {backgroundColor: `rgba(60, 60, 60, 0.26)`}:null}
         className="bg-black/90 fixed w-full h-full top-0  left-0 overflow-hidden"></motion.div>      
 
           <BrowserRouter>

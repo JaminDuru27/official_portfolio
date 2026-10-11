@@ -8,7 +8,7 @@ export function Card({theme,children, colspan, rowspan, p=4, colstart, rowstart,
         visible: {opacity: 1, y: 0, scale: 1, transition: {duration: 0.4, ease:`easeInOut`}}
     }}
     animate={theme === `light`
-      ?{backgroundColor: `rgba(0,0,0,0.1)`, boxShadow:`none`, borderColor: `rgba(0,0,0,.1)`, color: `rgba(0,0,0,0.8)`}
+      ?{backgroundColor: `rgba(0,0,0,0.1)`, boxShadow:`none`, borderColor: `rgba(255, 255, 255, 0.58)`, color: `rgb(230, 230, 230)`}
       :{backgroundColor: `rgba(255,255,255,0.1)`, boxShadow:`none`, borderColor: `rgba(255,255,255,.1)`, color: `rgba(255,255,255,0.8)`}}
     style={{
       boxShadow:`0px 0px 8px 0px #00000059`,
