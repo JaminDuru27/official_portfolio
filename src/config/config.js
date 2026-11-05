@@ -149,20 +149,13 @@ export const config = {
         src: `https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=85`
         },
         {
-        name: "Life Conservationist Org",
-        category: "Non-Profit Portal",
-        descr: "Full-stack web application featuring dynamic content management and fast client rendering.",
-        stack: [FaReact, SiVite, DiNodejs],
-        link: "https://github.com/example/life-conservation",
-        src: `/web4.jpg`
-        },
-        {
         name: "Glow Haus",
         category: "Web Application",
         descr: "Modern skincare e-commerce platform with a focus on clean design and seamless user experience.",
         stack: [FaReact, SiTailwindcss, SiVite, DiNodejs],
-        link: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85",
-        src: `/glowhaus.jpg`
+        link: `https://glowhaus-nu.vercel.app/`,
+        src: `https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85`,
+    
         },
         {
         name: "Amaka's Kitchen",
@@ -196,8 +189,8 @@ export const config = {
         category: "Web Application",
         descr: "Modern skincare e-commerce platform with a focus on clean design and seamless user experience.",
         stack: [FaReact, SiTailwindcss, SiVite, DiNodejs],
-        link: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85",
-        src: `/glowhaus.jpg`
+        link: `https://glowhaus-nu.vercel.app/`,
+        src: `https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85`,
         },
         
     ],

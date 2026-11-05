@@ -117,15 +117,15 @@ export function Projects({theme, setTheme}){
                 children={(
                     <>
                     <motion.div 
+                    onClick={()=>{
+                        const length = config.allProjects.length
+                        setCurrentP(p=>((p + 1) % length))
+                    }}
                     animate={{translateX: `-${currentP * 100}%`}}
                     className="w-full h-full  flex items-center ">
                         {config.allProjects.map(({name, category, descr, stack, link, src},k)=>{
-                            return (
+                         return (
                                 <div 
-                                onClick={()=>{
-                                    const length = config.allProjects.length
-                                    setCurrentP(p=>((length - 1) - Math.abs((p % (2 * (length - 1))) - (length - 1))))
-                                }}
                                 key={k} className="w-full  h-full shrink-0 relative">
                                     <img src={src} 
                                     className="w-full h-full z-[-1] object-cover absolute top-0 left-0"
@@ -183,9 +183,6 @@ export function Projects({theme, setTheme}){
                         <div className="">{config.labProject.title}</div>
                         <div className="text-[.6rem]">{config.labProject.description}</div>
                         <div className="flex items-center gap-x-2">
-                            <a 
-                            href={config.labProject.docsUrl} target="_blank"
-                            className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">docs {<cg.CgExternal/>}</a>
                             <a 
                             href={config.labProject.demoUrl} target="_blank"
                             className="p-2 text-[.8rem] capitalize border-2 border-white/20 rounded-lg flex items-center gap-x-2">demo {<cg.CgExternal/>}</a>
