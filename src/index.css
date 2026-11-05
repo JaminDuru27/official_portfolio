@@ -1,3 +1,75 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="dark"] {
+  --bg: #0b0b10;
+  --surface: #14141c;
+  --border: #25252f;
+  --text: #ececf1;
+  --muted: #8b8b9a;
+  --accent: #7c5cff;
+  --accent-2: #22d3ee;
+  --radius: 14px;
+}
+
+[data-theme="light"] {
+  --bg: #fafafb;
+  --surface: #ffffff10;
+  --border: #e6e6ec;
+  --text: #020203;
+  --muted: #62627a;
+  --accent: #5b3df5;
+  --accent-2: #010202;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+
+h1, h2, h3 {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+.nav {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.2s, border-color 0.2s;
+}
+.nav:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 @font-face {
     font-family: font;
@@ -8,6 +80,7 @@
     font-family: font;
     user-select: none
 }
+
 .scoop{
     corner-shape: scoop 
 }
@@ -19,5 +92,3 @@
     background-color:rgba(0, 0, 0, 0.759);
     border-radius: 4px
 }
-
-@import "tailwindcss";

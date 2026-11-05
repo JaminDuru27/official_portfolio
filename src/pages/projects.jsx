@@ -124,7 +124,6 @@ export function Projects({theme, setTheme}){
                                 <div 
                                 onClick={()=>{
                                     const length = config.allProjects.length
-                                    console.log((length - 1) - Math.abs((p % (2 * (length - 1))) - (length - 1)))
                                     setCurrentP(p=>((length - 1) - Math.abs((p % (2 * (length - 1))) - (length - 1))))
                                 }}
                                 key={k} className="w-full  h-full shrink-0 relative">

@@ -30,22 +30,24 @@ export function Home({theme,setTheme}){
         colspan={4} rowspan={4} p={16}
         children={(
           <>
-          <div className="text-bold text-[1.6rem]">{config.intro.name}</div>
-          <div className="text-bold text-[.8rem] ">{config.intro.bio}</div>
+          <div className="text-text">k2ok2o</div>
+          <div className="font-bold text-[1.6rem]">{config.intro.name}</div>
+          <div className="text-muted text-[.8rem] ">{config.intro.bio}</div>
           </>
         )}
         />
-        {/* pic */} 
+        {/* profile image */}
         <Card
         theme={theme}
-        colstart={5} rowstart={0}
-        colspan={3} rowspan={4} p={0}
-        children={(
-          <>
-          <img src={config.picsrc} className='w-full h-full absolute object-cover  top-0 left-0'  />
-          </>
-        )}
+          colstart={5} rowstart={0}
+          colspan={3} rowspan={4} p={0}
+          children={(
+            <>
+            <img src={config.profilesrc} className='absolute top-1/2 left-1/2 translate-[-50%]'  />
+            </>
+          )}
         />
+
         {/* narquee */}
         <Card
         theme={theme}
@@ -106,7 +108,7 @@ export function Home({theme,setTheme}){
         colspan={5} rowspan={4} p={16}
         children={(
           <>
-          <div className="w-full h-full absolute object-cover top-0 left-0">
+          <div className="w-full p-2 h-full absolute object-cover top-0 left-0">
             <img 
             src={config.weatherSrc} 
             className='w-full h-full absolute top-0 left-0' 
@@ -126,17 +128,18 @@ export function Home({theme,setTheme}){
         )}
         />
 
-        {/* profile image */}
+        {/* pic */} 
         <Card
         theme={theme}
-          colstart={6} rowstart={5}
-          colspan={3} rowspan={4} p={0}
-          children={(
-            <>
-            <img src={config.profilesrc} className='absolute top-1/2 left-1/2 translate-[-50%]'  />
-            </>
-          )}
+        colstart={6} rowstart={5}
+        colspan={3} rowspan={4} p={0}
+        children={(
+          <>
+          <img src={config.picsrc} className='w-full h-full absolute object-cover  top-0 left-0'  />
+          </>
+        )}
         />
+
         
         {/* yrs of work */}
         <Card

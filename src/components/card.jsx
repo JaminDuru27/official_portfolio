@@ -7,9 +7,6 @@ export function Card({theme,children, colspan, rowspan, p=4, colstart, rowstart,
         hidden: {opacity: 0, y: 20, scale: 0.9},
         visible: {opacity: 1, y: 0, scale: 1, transition: {duration: 0.4, ease:`easeInOut`}}
     }}
-    animate={theme === `light`
-      ?{backgroundColor: `rgba(0,0,0,0.1)`, boxShadow:`none`, borderColor: `rgba(255, 255, 255, 0.58)`, color: `rgb(230, 230, 230)`}
-      :{backgroundColor: `rgba(255,255,255,0.1)`, boxShadow:`none`, borderColor: `rgba(255,255,255,.1)`, color: `rgba(255,255,255,0.8)`}}
     style={{
       boxShadow:`0px 0px 8px 0px #00000059`,
       padding: `${p}px`,
@@ -20,7 +17,9 @@ export function Card({theme,children, colspan, rowspan, p=4, colstart, rowstart,
     }}
     className={`
       lg:[grid-column-start:var(--cs)]  lg:[grid-column-end:var(--csp)]  lg:[grid-row-start:var(--rs)]  lg:[grid-row-end:var(--rsp)] 
-      relative  overflow-hidden border-1  flex gap-4 flex-col rounded-2xl  backdrop-blur-2xl ${style}`}
+      relative  overflow-hidden   flex gap-4 flex-col rounded-2xl  backdrop-blur-2xl ${style}
+      card text-text border-border border-2
+      `}
     >
       {children}
     </motion.div>
