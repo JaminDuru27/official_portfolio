@@ -10,6 +10,7 @@ import { SiTailwindcss, SiTauri, SiVite } from "react-icons/si";
 
 export const config = {
     //Home
+    web3FormAccessKey:`4138e58a-6fa1-406b-9420-f2efb75b4731`,
     backgroundSrc: `/bg.jpeg`,
     picsrc:`/pic.jpg`,
     profilesrc: `/profile.jpg`, 

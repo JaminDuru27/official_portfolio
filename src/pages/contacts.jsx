@@ -9,6 +9,7 @@ import { CgMail } from "react-icons/cg";
 import { Grid } from "../components/grid";
 import { randomBrightColor } from "../utils/randomColor";
 import { FcContacts } from "react-icons/fc";
+import { tr } from "framer-motion/client";
 
 export function Contacts({theme,setTheme}){
     const [c, setC] = useState(0)
@@ -90,9 +91,23 @@ export function Contacts({theme,setTheme}){
         }
     },[])
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (event)=>{
+        console.log(`kkokoko`)
+        event.preventDefault()
+        setSending(true)
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        formData.append("access_key", config.web3FormAccessKey);
 
-    }
+        const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+        });
+
+        const data = await response.json();
+        setMessage(data.success ? "Success!" : "Error");
+        setSending(false)
+    };
     return (
         <Grid
         theme={theme} 
@@ -146,7 +161,7 @@ export function Contacts({theme,setTheme}){
             children={(
                 <div className="w-full h-full overflow-y-auto scrolly ">
                 <div className="flex items-center gap-x-2 p-4 text-[1.5rem] text-bold">Send me and email{<CgMail/>}</div>
-                <form ref={form} onSubmit={handleSubmit} className="space-y-6 rounded-2xl p-2 overflow-hidden  relative">
+                <form ref={form} onSubmit={(e)=>{handleSubmit(e)}} className="space-y-6 rounded-2xl p-2 overflow-hidden  relative">
                 
                     <motion.div
                     initial={{display:`none`, opacity:0}} 
