@@ -30,7 +30,6 @@ export function Home({theme,setTheme}){
         colspan={4} rowspan={4} p={16}
         children={(
           <>
-          <div className="text-text">k2ok2o</div>
           <div className="font-bold text-[1.6rem]">{config.intro.name}</div>
           <div className="text-muted text-[.8rem] ">{config.intro.bio}</div>
           </>
@@ -147,7 +146,7 @@ export function Home({theme,setTheme}){
           colstart={9} rowstart={5}
           colspan={2} rowspan={4} p={16}
           children={(
-            <NumberCard number={config.yearsOfExperience} title={`yrs`}/>
+            <NumberCard number={config.yearsOfExperience} title={`years experience`}/>
           )}
         />
         

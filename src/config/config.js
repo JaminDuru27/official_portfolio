@@ -6,15 +6,15 @@ import { FcNext } from "react-icons/fc";
 import { LiaLinkedin } from "react-icons/lia";
 import { MdEmail } from "react-icons/md";
 import { RiTailwindCssLine } from "react-icons/ri";
-import { SiTailwindcss, SiVite } from "react-icons/si";
+import { SiTailwindcss, SiTauri, SiVite } from "react-icons/si";
 
 export const config = {
     //Home
     backgroundSrc: `/bg.jpeg`,
     picsrc:`/pic.jpg`,
     profilesrc: `/profile.jpg`, 
-    yearsOfExperience: 12,
-    email: `example@gmail.com`,
+    yearsOfExperience: 5,
+    email: `jaminduru5@gmail.com`,
     weatherSrc: `/pic2.jpg`,
     about: `Passionate about his work. Codes with disciple`,
     quote: {
@@ -23,8 +23,8 @@ export const config = {
     },
     cvlink: ``, //link to download or view cv
     intro: {
-        name: `Henry Dami`,
-        bio: `Software developer, currently working at RenCo on the developer team in London`
+        name: `Jamin Duru`,
+        bio: `Software developer, currently working at remote job as a full-stack developer. Passionate about building scalable web applications and exploring new technologies.`,
     },
     tech:[
         {icon: FaJs, fill: `yellow`, stroke:`transparent`},
@@ -32,33 +32,32 @@ export const config = {
         {icon: BsTypescript, fill: `blue`, stroke:`transparent`},
         {icon: FcNext, fill: `yellow`, stroke:`transparent`},
         {icon: DiHtml5, fill: `red`, stroke:`transparent`},
+        {icon: DiNodejs, fill: `green`, stroke:`transparent`},
+        {icon: SiTauri, fill: `green`, stroke:`transparent`},
     ],
     handles:[
-        {icon: FaGithub, link:``,color: ``,},
-        {icon: FaLinkedin, link:``,color: ``},
-        {icon: FaTwitter, link:``,color: ``},
-        {icon: FaInstagram, link:``,color: ``},
-        {icon: FaFacebook, link:``,color: ``},
+        {icon: FaGithub, link:`https://github.com/JaminDuru27`,color: ``,},
+        {icon: FaLinkedin, link:`https://www.linkedin.com/in/germaine-duru-035340406?utm_source=share_via&utm_content=profile&utm_medium=member_android`,color: ``},
     ],
     projects: [
-        {name: `The Goodwill Project`, link: ``},
-        {name: `Life Conservationist Org`, link: ``},
-        {name: `RUSH Hour`, link: ``},
+        {name: `Loom and Line`, link: `https://loom-line-nigerian-wardrobe.vercel.app/`},
+        {name: `Glow Haus`, link: `https://glowhaus-nu.vercel.app/`},   
+        {name: `Amakas Kitchen`, link: `https://amaka-kitchen-deliciously-made.vercel.app/`},
     ],
 
     //Work
     watchSrc: `/watch.jpg`,
     timeline: [
         { 
-            year: 2014, 
+            year: 2021, 
             descr: "Wrote my first lines of code and started exploring software fundamentals." 
         },
         { 
-            year: 2020, 
+            year: 2023, 
             descr: "Dived deep into modern web development, mastering HTML, CSS, and modern JS." 
         },
         { 
-            year: 2021, 
+            year: 2024, 
             descr: "Started building full-stack web applications and taking on freelance projects." 
         },
         { 
@@ -76,11 +75,18 @@ export const config = {
             by: "Meta / Coursera",
             year: "2023",
             about: "Building scalable frontend UIs with React alongside robust RESTful APIs and backend database modeling.",
-            link: ""
+            link: "#"
+        },
+        {
+            title: "Javascript Certification",
+            by: "PriyGop",
+            year: "2026",
+            about: "Javascript certification for advanced web development, including ES6+, asynchronous programming, and modern frameworks.",
+            link: "https://priygop.com/certificate/verify/CERT-MURNYO5X-0J59XJ"
         },
         ],
         badges:[
-            {impressions: 500, unit: `%`, title:`Commits`},
+            {impressions: 50, unit: `%`, title:`Commits`},
             {impressions: 45, unit: `+`, title:`Starts`},
             {impressions: 100, unit: `%`, title:`Uptime`},
         ],
@@ -103,44 +109,44 @@ export const config = {
 
     // Projects 
     productCard1:{
-        src: `/web3.jpg`,
-        title: `Academic`,
-        link:``,
-        text: `School management app`
+        src: `https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=85`,
+        title: `Loom And Line`,
+        link:`https://loom-line-nigerian-wardrobe.vercel.app/`,
+        text: `Fashion e-commerce platform built with React, Tailwind CSS, and Vite.`
     },
     productCard2:{
-        src: `/web4.jpg`,
-        title: `Good Will Project`,
-        link:``,
-        text: `Do better as a person`
+        src: `https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85`,
+        title: `Glow Haus`,
+        link:`https://glowhaus-nu.vercel.app/`,
+        text: `Modern skincare e-commerce platform. Seamless user experience.`
     },
     featuredProject: {
-        title: "School Management System (SMS)",
-        tagline: "Desktop-First Administrative Platform",
-        description: "Architected a high-performance administrative platform tailored for secondary schools. Features offline database sync, automated student grading pipelines, and custom layout views.",
-        stack: [FaReact, SiVite, "Tailwind CSS", "PostgreSQL"],
-        demoUrl: "https://example.com/demo",
-        docsUrl: "https://github.com/example/docs",
+        title: "Loom And Line",
+        tagline: "E-commerce Platform Designed for Fashion Retail",
+        description: "Fashion e-commerce platform built with React, Tailwind CSS, and Vite. Features responsive design, dynamic product listings, and seamless user experience.",
+        stack: [FaReact, SiVite, "Tailwind CSS", "Vite"],
+        demoUrl: "https://loom-line-nigerian-wardrobe.vercel.app/",
+        docsUrl: "https://loom-line-nigerian-wardrobe.vercel.app/",
         
     },
 
     // Performance / Experimental Lab Card
     labProject: {
-        title: "Canvas Animation Engine",
-        tagline: "Graphics & UI Performance",
-        description: "GPU-accelerated HTML5 canvas background pipeline eliminating main-thread layout lag while maintaining infinite 60fps animations.",
-        stack: ["HTML5 Canvas", "GPU Acceleration", "Framer Motion"]
+        title: "ClasioDesk",
+        tagline: "School Management Multi tenant SaaS Platform",
+        description: "A high-performance, desktop-first school management system built with React, Tailwind CSS, and Node.js. Features real-time data updates, custom canvas engines, and a modular architecture for scalability.",
+        stack: ["HTML5 Canvas", "GPU Acceleration", "Framer Motion", "Tailwind CSS", "Node.js", "React"],
     },
 
     // Array powering the Arc Ring & Grid
     lovedProjects: [
         {
-        name: "The Goodwill Project",
+        name: "Loom And Line",
         category: "Web Application",
-        descr: "Interactive platform built with a modern UI stack and responsive layouts.",
+        descr: "Fashion e-commerce platform built with React, Tailwind CSS, and Vite. Features responsive design, dynamic product listings, and seamless user experience.",
         stack: [FaReact, SiTailwindcss ],
         link: "https://github.com/example/goodwill",
-        src: `/web3.jpg`
+        src: `https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=85`
         },
         {
         name: "Life Conservationist Org",
@@ -151,63 +157,47 @@ export const config = {
         src: `/web4.jpg`
         },
         {
-        name: "RUSH Hour",
-        category: "Web App",
-        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
-        stack: [FaReact, SiTailwindcss ],
-        link: "https://github.com/example/rush-hour",
-        src: `/web1.jpg`
+        name: "Glow Haus",
+        category: "Web Application",
+        descr: "Modern skincare e-commerce platform with a focus on clean design and seamless user experience.",
+        stack: [FaReact, SiTailwindcss, SiVite, DiNodejs],
+        link: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85",
+        src: `/glowhaus.jpg`
         },
         {
-        name: "School board",
+        name: "Amaka's Kitchen",
         category: "Web App",
         descr: "High-performance web dashboard with clean component structure and real-time state updates.",
         stack: [FaReact, SiTailwindcss ],
-        link: "https://github.com/example/rush-hour",
-        src: `/web2.jpg`
+        link: `https://amaka-kitchen-deliciously-made.vercel.app/`,
+        src: `https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80`
         },
         
     ],
     allProjects: [
         {
-        name: "The Goodwill Project",
+        name: "Amaka's Kitchen",
+        category: "Web App",
+        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
+        stack: [FaReact, SiTailwindcss ],
+        link: `https://amaka-kitchen-deliciously-made.vercel.app/`,
+        src: `https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80`
+        },
+        {
+        name: "Loom And Line",
         category: "Web Application",
-        descr: "Interactive platform built with a modern UI stack and responsive layouts.",
-        stack: [FaReact, SiTailwindcss ],
-        link: "https://github.com/example/goodwill",
-        src: `/web3.jpg`
+        descr: "Fashion e-commerce platform built with React, Tailwind CSS, and Vite. Features responsive design, dynamic product listings, and seamless user experience.",
+        stack: [FaReact, SiTailwindcss, SiVite, DiNodejs],
+        link: "https://loom-line-nigerian-wardrobe.vercel.app/",
+        src: `https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=85`
         },
         {
-        name: "Life Conservationist Org",
-        category: "Non-Profit Portal",
-        descr: "Full-stack web application featuring dynamic content management and fast client rendering.",
-        stack: [FaReact, SiVite, DiNodejs],
-        link: "https://github.com/example/life-conservation",
-        src: `/web4.jpg`
-        },
-        {
-        name: "RUSH Hour",
-        category: "Web App",
-        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
-        stack: [FaReact, SiTailwindcss ],
-        link: "https://github.com/example/rush-hour",
-        src: `/web1.jpg`
-        },
-        {
-        name: "School board",
-        category: "Web App",
-        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
-        stack: [FaReact, SiTailwindcss ],
-        link: "https://github.com/example/rush-hour",
-        src: `/web1.jpg`
-        },
-        {
-        name: "Md Editor",
-        category: "Web App",
-        descr: "High-performance web dashboard with clean component structure and real-time state updates.",
-        stack: [FaReact, SiTailwindcss ],
-        link: "https://github.com/example/rush-hour",
-        src: `/web1.jpg`
+        name: "Glow Haus",
+        category: "Web Application",
+        descr: "Modern skincare e-commerce platform with a focus on clean design and seamless user experience.",
+        stack: [FaReact, SiTailwindcss, SiVite, DiNodejs],
+        link: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85",
+        src: `/glowhaus.jpg`
         },
         
     ],
@@ -215,7 +205,7 @@ export const config = {
     //Contact
 
     services:[
-        `webflow`, `SEO`, `UX/UI Design`, `Framer`, `WebFlow`, `3D design`, `Social Media`,`Branding` 
+        `UX/UI Design`, `Web Development`, `Web Design`, `Software Engineering` 
     ],
-    phoneNo: `+234870000000`,
+    phoneNo: `+2347072773050`,
 }

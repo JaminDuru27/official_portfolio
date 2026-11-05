@@ -123,7 +123,13 @@ export function Contacts({theme,setTheme}){
                     setCopied(true)
                 }}
                 className="w-full cursor-pointer h-full flex text-[2.5rem] flex justify-center items-center"
-                >{<BiPhone/>}
+                >{<BiPhone
+                onClick={()=>{
+                    const a= document.createElement(`a`)
+                    a.href = `tel:${config.phoneNo}`
+                    a.click()
+                }}
+                />}
                     {copied ?(
                         <div className="absolute bg-white/20 rounded-lg text-[.7rem] p-2 capitalize  top-2 right-2 flex items-center gap-x-2">copied number {<BiCheck/>}</div>
                     ):null}
@@ -136,6 +142,7 @@ export function Contacts({theme,setTheme}){
             theme={theme}
             colstart={0} rowstart={5}
             colspan={4} rowspan={8}
+            style="row-span-3 sm:row-span-3 md:row-span-2 lg:row-span-1"
             children={(
                 <div className="w-full h-full overflow-y-auto scrolly ">
                 <div className="flex items-center gap-x-2 p-4 text-[1.5rem] text-bold">Send me and email{<CgMail/>}</div>
@@ -295,7 +302,7 @@ export function Contacts({theme,setTheme}){
                                     className="">
                                         <Icon 
                                         onClick={()=>{
-                                            const a = document.createElement(`a`); a.href = link;a.click()
+                                            const a = document.createElement(`a`); a.href = link; a.target=`_blank`; a.click()
                                         }}
                                         size={size/3} />
                                     </div>

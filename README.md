@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -18,3 +19,7 @@ If you are developing a production application, we recommend using TypeScript wi
 =======
 # bento-react-portfolio-template-1
 >>>>>>> 7901600bffb270878b4b992ef5f70fa528ff4043
+=======
+# official_portfolio
+My Official personal portfolio as a web developer 
+>>>>>>> 776db6b789c31748768177243000736c82ce4280
