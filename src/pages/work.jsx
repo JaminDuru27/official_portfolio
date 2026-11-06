@@ -131,6 +131,7 @@ export function Work({theme, setTheme}){
             theme={theme}
             colstart={10} colspan={3}
             rowstart={4} rowspan={9} p={0}
+            style="row-span-2 md:row-span-2 "
             children={( 
                 <>
                 <div className="w-full flex scrolly overflow-y-auto p-4 flex-col gap-y-2 ">
