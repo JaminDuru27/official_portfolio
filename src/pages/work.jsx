@@ -19,6 +19,7 @@ export function Work({theme, setTheme}){
             theme={theme}
             colstart={0} colspan={4} p={16}
             rowstart={0} rowspan={12} 
+            style="row-span-2 md:row-span-2 "
             children={(
                 <>
                 <div className="text-2xl capitalize">Time line</div>
