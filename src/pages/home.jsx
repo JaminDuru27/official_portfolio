@@ -14,10 +14,13 @@ import { Theme } from '../components/theme'
 import { Grid } from '../components/grid'
 export function Home({theme,setTheme}){
   const [weatherData, setWeatherData] = useState(null)
-  useEffect(()=>{
+  const updateWeatherData  = ()=>{
     getWeatherByCity((data)=>{
       setWeatherData(data)
     })
+  }
+  useEffect(()=>{
+    
   }, [])  
   return (
       <Grid
@@ -121,7 +124,15 @@ export function Home({theme,setTheme}){
                 <div className="p-2 rounded-full bg-white/10 w-fit backdrop-blur-2xl flex items-center gap-x-2"
                 >{<WiWindy/>}{weatherData?.current?.wind_speed_10m} {weatherData?.current_units?.wind_speed_10m}</div>
               </div>
-            ):null}
+            ):(
+              <div
+              onClick={()=>{
+                updateWeatherData()
+              }}
+              className="text-2xl cursor-pointer z-20 absolute top-0 left-0 capitalize w-full h-full flex items-center justify-center">
+                {<TiWeatherCloudy color='var(--text)'  className='w-20 h-20'/>}
+              </div>
+            )}
           </div>
           </>
         )}

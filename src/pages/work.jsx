@@ -17,11 +17,12 @@ export function Work({theme, setTheme}){
             {/* timeline */}    
             <Card
             theme={theme}
-            colstart={0} colspan={4} p={5}
-            rowstart={0} rowspan={12}
+            colstart={0} colspan={4} p={16}
+            rowstart={0} rowspan={12} 
             children={(
                 <>
-                <div className="w-full h-fit p-4 relative overflow-y-auto scrolly flex flex-col  justify-around">
+                <div className="text-2xl capitalize">Time line</div>
+                <div className="w-full h-fit p-2 relative overflow-y-auto scrolly flex flex-col  justify-around">
                     {config.timeline.map(({year, descr =``}, k)=>{
                         return(
                             <motion.div
@@ -128,10 +129,11 @@ export function Work({theme, setTheme}){
             <Card
             theme={theme}
             colstart={10} colspan={3}
-            rowstart={4} rowspan={9}
+            rowstart={4} rowspan={9} p={0}
             children={( 
                 <>
-                <div className="w-full flex scrolly overflow-y-auto flex-col gap-y-2 ">
+                <div className="w-full flex scrolly overflow-y-auto p-4 flex-col gap-y-2 ">
+                <div className="text-2xl capitalize">Testimonials</div>
                     {
                         config.testimonials.map(({src, name, role, comment}, k)=>{
                             return (
